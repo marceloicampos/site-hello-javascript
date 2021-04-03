@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Aula 07 - Ex005</title>
+</head>
+<body>
+    <h1>Operadores - Parte 01</h1>
+    <p><a href="../../index.html">Voltar para HOME</a></p>
+    <hr>
+    <h2>Operadores Aritméticos</h2>
+    <p>
+        <ul>
+            <li>** potência</li>
+            <li>* multiplicação</li>
+            <li>/ divisão em números reais</li>
+            <li>% retorna o resto da divisão inteira</li>
+            <li>+ soma</li>
+            <li>- subtração</li>
+        </ul>
+        <ol>
+            <p><strong>Precedência</strong> dos Operadores Aritméticos</p>
+            <li><strong>( ) parênteses</strong></li>
+            <li><strong>** potência</strong></li>
+            <li><strong>* multiplicação</strong> &gt;&gt;&gt; <strong>/ divisão</strong> em números reais &gt;&gt;&gt; <strong>% resto da divisão inteira</strong> &gt;&gt;&gt; da esquerda para direita quam aparecer primeiro</li>
+            <li><strong>+ soma</strong> &gt;&gt;&gt; <strong>- subtração</strong> &gt;&gt;&gt; da esquerda para direita quam aparecer primeiro</li>
+        </ol>
+    </p>
+    <h2>Atribuição de Variável</h2>
+    <p><strong>Atribuição simples:</strong> quando simplesmente atribuímos um valor ou uma expressão a uma variável, como no caso var n = 1, onde a variável n recebe o valor 1, ou seja, a variável n é atribuída o valor de 1 e esse valor fica guardado na memória do computador como n recebe o valor de 1.<br><strong>Nota:</strong> não podemos falar que n = 1 isso é errado, o correto a variável n recebe o valor simples de 1.</p>
+    <p><strong>Auto Atribuição:</strong> são atribuições à própria variável, ou seja, var n = 3, n recebe 3, se inserimos n = n + 4, o n irá se auto atribuir e somará agora n = 3 + 4, então n receberá agora o valor de 7.<br><strong>Nota:</strong> podemos simplificar a auto atribuição, no caso podemos dizer n +=4 e assim n recebe o valor de 7, ou seja, n recebe ele mesmo + 4 que então recebe o valor de 7.</p>
+    <h2>Operadores de Incremento</h2>
+    <p><strong>Incremento:</strong> simplesmente incrementamos a variável um valor simplificado, ou seja, var x = 5, x recebe 5, se auto atribuirmos x = x + 1, x agora recebe o valor de 6, mas podemos simplesmente simplificar incrementando o operador e dizer assim var x = 5, onde x recebe 5, incrementando podemos dizes x++, agora x recebe ele mesmo somado de forma incremental e então x recebe o valor de 6.<br><strong>Nota:</strong> Existe, também, o pré incremento onde pode estabelecer var x = 5 e passar o pré incremento ++x e então x recebe agora o valor de 6</p>
+    <p></p>
+    <hr>
+    <script>
+        var a = 5 +3
+        var b = a % 5
+        var c = 5 * b ** 2 // nesse caso primeiro é calculado a potÊncia
+        var d = 10 - a / 2 // nesse caso primeiro é calculado a divisão
+        var e = 6 * 2 / d // nessa primeiro multiplica depois divide 
+        var f =  b % e + 4 / e // nesse caso primeiro resto da divisão inteira, depois a divisão e por último a soma o resto pela divisão
+
+        document.write(`<p>Esse número >>> ${f} <<< vem da atribuição de diversas variáveis simples, verifique o código fonte.<p>`) // veja o resultado no navegador
+
+        var n = 3
+        n = n + 4 // n passa a valer 7
+        n = n * 2 // n passa a valer 14
+        n /= 7 // n passa a valer 2
+
+        document.write(`<p>Esse número >>> ${n} <<< vem de uma auto atribuição, verifique o código fonte.<p>`)
+        var x = 5
+        x = x + 1 // n passa a valer 6
+        x = x - 1 // n volta a valer 5
+        x += 1 // n passa a valer 6, porém com auto atribuição
+        x -= 1 // n volta a valer 5, porém com atribuição
+        x++ // n passa a valer 6, porém com incremento
+        x-- // n volta a valer 5, porém com incremento
+
+        document.write(`<p>Esse número >>> ${x} <<< vem de um operador de incremento, verifique o código fonte.<p>`)
+    </script>
+    <hr>
+    <footer>
+        <p>Estudos em JavaScript por <a href="https://marceloicampos.com/about" target="_blank">Marcelo Ildefonso Campos</a></p>
+    </footer>
+</body>
+</html>

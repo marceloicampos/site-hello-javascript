@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Aula 06 - Ex004</title>
+</head>
+<body>
+    <h1>Atributos em Strings e Numbers - Aula 06 - Ex004</h1>
+    <p><a href="../../index.html">Voltar para HOME</a></p>
+    <hr>
+    <h2>Trabalhando com Strings</h2>
+    <p>ATRIBUTOS DE STRING<br>
+    <strong>s.length</strong> diz quantos caracteres tem uma string<br>
+    <strong>s.toUpperCase()</strong> colocar a string para caixa alta<br>
+    <strong>s.toLowerCase()</strong> colocar a string em letras minúsculas<br>
+    </p>
+    <p>ATRIBUTOS DE NUMBERS<br>
+    <strong>n.toFixed(n)</strong> diz quantas casas decimais tem um número<br>
+    <strong>n.replace('.',',')</strong> troca o ponto pela vírgula<br>
+    <strong>n.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})</strong> colocar o número com cifrão em Reais BRL <br>
+    </p>
+    <div id="nome">
+        <script>
+            var nome = window.prompt('Qual o seu nome?')
+            document.write(`Seu nome ${nome.toUpperCase()} tem ${nome.length} letras.<br> `)
+            document.write('<em>Seu nome ' + nome.toLowerCase() + ' tem ' + nome.length + ' letras.<em>')
+        </script>
+    </div>
+    <hr>
+    <footer>
+        <p>Estudos em JavaScript por <a href="https://marceloicampos.com/about" target="_blank">Marcelo Ildefonso Campos</a></p>
+    </footer>
+</body>
+</html>

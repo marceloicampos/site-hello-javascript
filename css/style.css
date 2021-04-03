@@ -16,3 +16,9 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+div#nome {
+    color: rgba(3, 3, 3, 0.7);
+    font-size: 24px;
+    font-weight: bold;
+}
