@@ -1,8 +1,8 @@
-# Aulas, Anotações, Exercícios, Desafios e Imersão
-## Curso JavaScript do CeV e Imersão Dev da Alura
+# Aulas, Anotações, Exercícios, Desafios
+## Curso JavaScript do CeV
 ## Projeto site-hello-javascript
 
-Repositório com atividades do **Curso de JavaScript** e aulas da **Imersão Dev em JavaScript**.
+Repositório com atividades do **Curso de JavaScript**.
 
 Html base para aulas de JavaScript
 
