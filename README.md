@@ -1,12 +1,12 @@
 # Aulas, Anotações, Exercícios, Desafios
 
-## Curso JavaScript do CeV
+## Curso JavaScript do Curso em Vídeo
 
 ## Projeto site-hello-javascript
 
 Repositório com atividades do **Curso de JavaScript**.
 
-Html base para aulas de JavaScript
+Html base para aulas de JavaScript verifique dentro do código README
 
 <!--
 <!DOCTYPE html>
