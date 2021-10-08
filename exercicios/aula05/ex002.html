@@ -1,50 +1,108 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/style.css">
-    <title>Aula 05 - Ex002</title>
-</head>
-<body>
-    <h1>Variáveis e Tipos Primitivos em JavaScript - Aula 05 - Ex002</h1>
-    <p><a href="../../index.html">Voltar para HOME</a></p>
-    <hr>
-    <h2>Variáveis - É uma objeto em programação que serve basicamente servem para guardar dados</h2>
-    <p>Nota: uma variável declarada usando a declaração var ou let sem especificar o valor inicial tem o valor undefined.</p>
-    <p>Nota: se uma variável é nula, o valor nulo se comporta como 0 em contextos numéricos e como falso em contextos booleanos.</p>
-    <p><strong>var</strong> - serve para armazenar qualquer tipo de dado, os chamados <strong>tipos primitívos</strong>, em variáveis, que são desde os primários como 'Strings' ou cadeia de caracteres, 'Number', 'Infinity', 'NaN', 'Boolean True and False' e outros como 'null' que é um objeto para o JavaScript, 'undefined', 'object', 'array' ou vetor da programação e até tipos complexos como estruturas criadas pelo programador como uma 'function'.<br><br>
-    Nota: pode ser usada para declarar tanto variáveis locais, dentro da função, como variáveis globais, fora da função.<br><br>
-    Nota: usamos o command typeof para verificar a variável utilizada.</p>
-    <p><strong>let</strong> - é muito semelhante ao var, no sentido de que podemos instanciar e armazenar qualquer tipo de objeto nelas, mas uma vez criadas as variáveis, quando utilizamos o let os seus valores podem ser sobrescritos, até mesmo por outros tipos de dados.<br><br> 
-    Nota: poder ser usada para declarar uma variável local de escopo do bloco.
-    Nota: let significa do inglês letting or to allow or permit, ou seja, deixa passar ou permita.</p>
-    <p><strong>const</strong> - funciona de forma análoga aos demais, entretanto, uma vez que o valor foi atribuído à variável, ele não pode ser modificado ou ser declarada novamente, ou seja, a variável é constante.</p>
-    <h2>Nome da Variável ou Identificador da Variável</h2>
-    <p>O nome da variável chamamos de identificador com as regras abaixo definidas</p>
-    <p>Para escrever nomes de variáveis:</p>
-    <ol>
-        <li>podemos começar com letras, $ ou _</li>
-        <li>podemos usar letras e números</li>
-        <li>podemos usar acentos e símbolos</li>
-        <li>NÃO PODEM começar com números</li>
-        <li>NÃO PODE conter espaços</li>
-        <li>NAÕ PODE usar palavras reservadas como function ou alert ou var entres outras</li>
-    </ol>
-    <p>NOTA: maiúsculas e minúsculas fazem diferença na hora de criar uma variável.</p>
-    <p>NOTA: é boa prática criar identificador de variáveis com nomes que sejam entendíveis para as próximas pessoas que forem analisar o código. Nomes coerentes para as variáveis coerentes.</p>
-    <script>
-        var n1 = 5 // n1 recebe 5
-        var n2 = 8.5 // n2 recebe 8.5
-        var n3 = 15 // n3 recebe 15
-        var s1 = "JavaScript" // s1 recebe JavaScript
-        var s2 = 'Curso' //s2 recebe Curso
-        var s3 = `Marcelo` // s3 recebe Marcelo
-    </script>
-    <hr>
-    <footer>
-        <p>Estudos em JavaScript por <a href="https://marceloicampos.com/about" target="_blank">Marcelo Ildefonso Campos</a></p>
-    </footer>
-</body>
+    <head>
+        <meta name="description" content="Web tutorials" />
+        <meta name="keywords" content="HTML, CSS, JavaScript" />
+        <meta name="author" content="Marcelo Ildefonso Campos" />
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../../css/style.css" />
+        <title>JavaScript - Aula 05 - Ex002</title>
+    </head>
+    <body>
+        <main>
+            <h1>
+                Variáveis e Tipos Primitivos em JavaScript - Aula 05 - Ex002
+            </h1>
+            <p><a href="../../index.html">Voltar para HOME</a></p>
+            <h2>
+                Variáveis são objetos em programação que serve basicamente
+                servem para guardar dados
+            </h2>
+            <p>
+                Nota: uma variável declarada usando a declaração var ou let sem
+                especificar o valor inicial tem o valor undefined.
+            </p>
+            <p>
+                Nota: se uma variável é nula, o valor nulo se comporta como 0 em
+                contextos numéricos e como falso em contextos booleanos.
+            </p>
+            <p>
+                <strong>var</strong> - serve para armazenar qualquer tipo de
+                dado, os chamados <strong>tipos primitivos</strong>, em
+                variáveis, que são desde os primários como 'Strings' ou cadeia
+                de caracteres, 'Number', 'Infinity', 'NaN', 'Boolean True and
+                False' e outros como 'null' que é um objeto para o JavaScript,
+                'undefined', 'object', 'array' ou vetor da programação e até
+                tipos complexos como estruturas criadas pelo programador como
+                uma 'function'.<br /><br />
+                Nota: pode ser usada para declarar tanto variáveis locais,
+                dentro da função, como variáveis globais, fora da função.<br /><br />
+                Nota: usamos o command typeof para verificar a variável
+                utilizada.
+            </p>
+            <p>
+                <strong>let</strong> - é muito semelhante ao var, no sentido de
+                que podemos instanciar e armazenar qualquer tipo de objeto
+                nelas, mas uma vez criadas as variáveis, quando utilizamos o let
+                os seus valores podem ser sobrescritos, até mesmo por outros
+                tipos de dados.<br /><br />
+                Nota: poder ser usada para declarar uma variável local de escopo
+                do bloco. Nota: let significa do inglês letting or to allow or
+                permit, ou seja, deixa passar ou permita.
+            </p>
+            <p>
+                <strong>const</strong> - funciona de forma análoga aos demais,
+                entretanto, uma vez que o valor foi atribuído à variável, ele
+                não pode ser modificado ou ser declarada novamente, ou seja, a
+                variável é constante.
+            </p>
+            <h2>Nome da Variável ou Identificador da Variável</h2>
+            <p>
+                O nome da variável chamamos de identificador com as regras
+                abaixo definidas
+            </p>
+            <p>Para escrever nomes de variáveis:</p>
+            <ol>
+                <li>podemos começar com letras, $ ou _</li>
+                <li>podemos usar letras e números</li>
+                <li>podemos usar acentos e símbolos</li>
+                <li>NÃO PODEM começar com números</li>
+                <li>NÃO PODE conter espaços</li>
+                <li>
+                    NAÕ PODE usar palavras reservadas como function ou alert ou
+                    var entres outras
+                </li>
+            </ol>
+            <p>
+                NOTA: maiúsculas e minúsculas fazem diferença na hora de criar
+                uma variável.
+            </p>
+            <p>
+                NOTA: é boa prática criar identificador de variáveis com nomes
+                que sejam entendíveis para as próximas pessoas que forem
+                analisar o código. Nomes coerentes para as variáveis coerentes.
+            </p>
+            <script>
+                var n1 = 5 // n1 recebe 5
+                var n2 = 8.5 // n2 recebe 8.5
+                var n3 = 15 // n3 recebe 15
+                var s1 = 'JavaScript' // s1 recebe JavaScript
+                var s2 = 'Curso' //s2 recebe Curso
+                var s3 = `Marcelo` // s3 recebe Marcelo
+            </script>
+        </main>
+        <div class="foot">
+            <hr />
+            <footer>
+                <p>
+                    Estudos em HTML5, CSS3 E JAVASCRIPT por
+                    <a href="https://marceloicampos.com/about" target="_blank"
+                        >Marcelo Ildefonso Campos</a
+                    >
+                </p>
+            </footer>
+        </div>
+    </body>
 </html>
