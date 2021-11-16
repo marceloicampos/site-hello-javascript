@@ -17,20 +17,27 @@
             <h2>Principais tipos primitivos</h2>
             <p>Nota: existem outros que estão relacionados na aula 06</p>
             <p>
-                NUMBER - para converter um number para string usamos String(n)
-                ou n.toString()
+                NUMBER to STRING - para converter um number para uma string
+                usamos
+                <strong> String(n) ou n.toString() </strong>
             </p>
             <p>
-                STRING - para converter uma string em número inteiro usamos o
-                parserInt(n) e o parseFloat(n) para converter num número real,
-                ou simplesmente usamos Number(n).
+                STRING to NUMBER - para converter uma string em número inteiro
+                usamos o
+                <strong>parserInt(n)</strong> para converter num número inteiro
+                e <strong>parseFloat(n)</strong> para converter num número real,
+                ou simplesmente usamos Number(n).<br /><br />
+                Nota: para fixar as casas decimais no parseFloat(n) usamos o
+                .toFixed(dígitos) e nos dígitos inserimos quando dígitos de
+                casas decimais teremos no número
             </p>
             <p>
-                Nota: TEMPLATE STRING OU MODELO DE STRING, podemos concatenar
-                várias strings usando a template string que fica entre crase e
-                cada variável é retornada por uma ${dentro de colchetes} ou
-                também chamado PLACEHOLDER ${}.<br />
-                Template String (`String ${} String ${}`)
+                Nota: <strong>TEMPLATE STRING OU MODELO DE STRING</strong>,
+                podemos concatenar várias strings usando a template string que
+                ficam entre crase e cada variável é retornada por um modelo
+                ${variável dentro de colchetes} ou também o chamado PLACEHOLDER
+                ${}.<br /><br />
+                Template String `string ${var} string ${var}`
             </p>
             <pre>
                 <code>
@@ -41,25 +48,36 @@
                 </code>
             </pre>
             <p>
-                Boolean - que basicamente comporta valores lógicos como true or
+                BOOLEAN - que basicamente comporta valores lógicos como true or
                 false.
             </p>
             <div id="nome">
                 <script>
-                    var n1 = parseFloat(
-                        window.prompt('Digite um número qualquer')
+                    var n1 = Number(
+                        window
+                            .prompt('Digite um número qualquer')
+                            .replace(',', '.')
                     ) // n1 recebe valor string
-                    var n2 = parseFloat(window.prompt('Digite outro número')) // n2 recebe valor string
+                    var n2 = parseFloat(
+                        window.prompt('Digite outro número').replace(',', '.')
+                    ) // n2 recebe valor string
                     var s = n1 + n2
-                    // var s = parseFloat(n1) + parseFloat(n2) pode ser assim também se retirar o parse nas variáveis anteriores
+                    // var s = Number(n1) + parseFloat(n2) pode ser assim também se retirar o parse nas variáveis anteriores
                     // para converter uma string em número inteiro usamos o Number.parseInt(n) ou simplesmente parseInt
                     // para converter uma string em número real usamos o Number.parseFloat(n) ou simplesmente parseFloat
                     // PODEMOS TAMBÉM usar somente Number(n) e o JavaScript irá entender que é um número se quiser especificar use o parseInt ou o parseFloat
-                    window.alert('A soma dos números é: ' + String(s))
+                    window.alert(
+                        'A soma de ' +
+                            String(n1).replace('.', ',') +
+                            ' + ' +
+                            String(n2).replace('.', ',') +
+                            ' é igual a: ' +
+                            String(s).replace('.', ',')
+                    )
                     var nome = window.prompt('Qual é o seu nome?')
                     // a variável nome recebe o que for escrito na função window.prompt
                     // podemos também usar o let
-                    var idade = window.prompt('Qual é a sua idade?')
+                    var idade = parseInt(window.prompt('Qual é a sua idade?'))
                     window.alert(
                         'É uma grande prazer te conhecer, ' + nome + '!'
                     )
@@ -69,11 +87,11 @@
                     document.write('Olá ' + nome + ', seja bem vindo ! ')
                     document.write(
                         'A soma de: ' +
-                            n1 +
+                            n1.toString().replace('.', ',') +
                             ' + ' +
-                            n2 +
-                            ' é igual ' +
-                            String(s) +
+                            n2.toString().replace('.', ',') +
+                            ' é igual a: ' +
+                            s.toFixed(2).replace('.', ',') +
                             '. '
                     )
                     document.write(
