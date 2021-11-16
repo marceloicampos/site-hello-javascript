@@ -31,12 +31,12 @@
                     <strong>* multiplicação</strong> &gt;&gt;&gt;
                     <strong>/ divisão</strong> em números reais &gt;&gt;&gt;
                     <strong>% resto da divisão inteira</strong> &gt;&gt;&gt; da
-                    esquerda para direita quam aparecer primeiro
+                    esquerda para direita quem aparecer primeiro
                 </li>
                 <li>
                     <strong>+ soma</strong> &gt;&gt;&gt;
                     <strong>- subtração</strong> &gt;&gt;&gt; da esquerda para
-                    direita quam aparecer primeiro
+                    direita quem aparecer primeiro
                 </li>
             </ol>
             <h2>Atribuição de Variável</h2>
@@ -77,20 +77,20 @@
             <hr />
             <script>
                 var a = 5 + 3
-                var b = a % 5
-                var c = 5 * b ** 2 // nesse caso primeiro é calculado a potÊncia
+                var b = a % 5 // nesse caso é calculado o resto da divisão
+                var c = 5 * b ** 2 // nesse caso primeiro é calculado a potência
                 var d = 10 - a / 2 // nesse caso primeiro é calculado a divisão
                 var e = (6 * 2) / d // nessa primeiro multiplica depois divide
-                var f = (b % e) + 4 / e // nesse caso primeiro resto da divisão inteira, depois a divisão e por último a soma o resto pela divisão
+                var f = (b % e) + 4 / e // nesse caso primeiro resto da divisão inteira, depois a divisão e por último a soma
                 document.write(
-                    `<p>Esse número >>> ${f} <<< vem da atribuição de diversas variáveis simples, verifique o código fonte.<p>`
-                ) // veja o resultado no navegador
+                    `<p>Esse número >>> ${f} <<< vem da atribuição de diversas variáveis simples, com resultado final na var f, verifique o código fonte.<p>`
+                )
                 var n = 3
                 n = n + 4 // n passa a valer 7
                 n = n * 2 // n passa a valer 14
                 n /= 7 // n passa a valer 2
                 document.write(
-                    `<p>Esse número >>> ${n} <<< vem de uma auto atribuição, verifique o código fonte.<p>`
+                    `<p>Esse número >>> ${n} <<< vem de uma auto atribuição, com resultado final na última var n, verifique o código fonte.<p>`
                 )
                 var x = 5
                 x = x + 1 // n passa a valer 6
@@ -100,9 +100,30 @@
                 x++ // n passa a valer 6, porém com incremento
                 x-- // n volta a valer 5, porém com incremento
                 document.write(
-                    `<p>Esse número >>> ${x} <<< vem de um operador de incremento, verifique o código fonte.<p>`
+                    `<p>Esse número >>> ${x} <<< vem de um operador de incremento, com resultado final na última var x, verifique o código fonte.<p>`
                 )
             </script>
+            <pre>
+                var a = 5 + 3
+                var b = a % 5 // nesse caso é calculado o resto da divisão
+                var c = 5 * b ** 2 // nesse caso primeiro é calculado a potência
+                var d = 10 - a / 2 // nesse caso primeiro é calculado a divisão
+                var e = (6 * 2) / d // nessa primeiro multiplica depois divide
+                var f = (b % e) + 4 / e // nesse caso primeiro resto da divisão inteira, depois a divisão e por último a soma
+
+                var n = 3
+                n = n + 4 // n passa a valer 7
+                n = n * 2 // n passa a valer 14
+                n /= 7 // n passa a valer 2
+
+                var x = 5
+                x = x + 1 // n passa a valer 6
+                x = x - 1 // n volta a valer 5
+                x += 1 // n passa a valer 6, porém com auto atribuição
+                x -= 1 // n volta a valer 5, porém com atribuição
+                x++ // n passa a valer 6, porém com incremento
+                x-- // n volta a valer 5, porém com incremento
+            </pre>
         </main>
         <div class="foot">
             <hr />
