@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta name="description" content="Web tutorials" />
+        <meta name="keywords" content="HTML, CSS, JavaScript" />
+        <meta name="author" content="Marcelo Ildefonso Campos" />
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../../css/style.css" />
+        <title>JavaScript - Aula 09 - Ex 007</title>
+    </head>
+    <body>
+        <main>
+            <h1>Introdução ao DOM - Aula 09 - Ex 007</h1>
+            <p><a href="../../index.html">Voltar para HOME</a></p>
+            <h2>Exercícios e Estudos com o DOM</h2>
+            <p>
+                Modelo de Objeto de Documento ou Document Object Model
+                &lpar;DOM&rpar;. Basicamente é o Javascript "rodando" dentro de
+                um navegador.
+            </p>
+            <p>ÁRVORE DOM
+              <ul>
+                <li>window - é a raiz e dentro do window temos basicamente 3 objetos principais</li><br />
+                <ol>
+                  <li class="loca">location - exemplo: a URL </li>
+                  <li id="doc">document - exemplo: o documento visto na tela</li>
+                  <li>history - exemplo: o histórico e cookies</li>
+                </ol><br />
+                <li>dentro do document temos basicamente o HTML que o parent e seus filhos o HEAD e o BODY que são children, e dentro do HEAD e BODY temos sus filhos como META, H1, P, DIV e etc, ou seja, a construção da árvore DOM</li>
+                <img src="./images/dom_tree.png" alt="árvore DOM">
+              </ul>
+            </p>
+            <p>Aqui vai o resultado</p>
+            <p>Aprendendo a usar o <strong>DOM</strong> em Javascript</p>
+            <p>Podemos acessar o DOM pelo JavaScript usando simplesmente o comando <strong>document.write&lpar;&rpar;</strong> dentro de uma tag &lt;script&gt; dentro do html</p>
+            <p name="gogo">Métodos de Acesso a Árvore do DOM</p>
+            <ul>
+                <li>Por Marca ou Tags - document.getElementsByTagName&lpar;&rpar;</li>
+                <li>Por ID - document.getElementById&lpar;&rpar;</li>
+                <li>Por Nome - document.getElementsByName&lpar;&rpar;</li>
+                <li>Por Classe - document.getElementsByClassName&lpar;&rpar;</li>
+                <li>Por Seletor em Css - document.querySelector&lpar;&rpar; ou document.querySelectorAll&lpar;&rpar;</li>
+            </ul>
+            <div id="msg">Clique em <strong>mim</strong></div><hr>
+            <script>
+                var corpo = window.document.body
+                corpo.style.background = 'black'
+                var p1 = document.getElementsByTagName('p')[4]
+                document.write('Texto replicado pelo acesso a DOM usando getElementsByTagName &nbsp;&nbsp;&nbsp;&gt; ' +  p1.innerText + '<br />')
+                p1.style.color = 'blue'
+                var d = document.getElementById('msg')
+                document.write('Texto replicado pelo acesso a DOM usando getElementById &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt; ' + d.innerText + ' - o innerText pega somente o texto' +  '<br />')
+                d.style.color = 'white'
+                document.write('Texto replicado pelo acesso a DOM usando getElementById &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt; ', document.getElementById('msg').innerHTML, ' - o innerHTML pega o HTML', '<br />')
+                d.style.background = 'green'
+                d.style.width = '128px'
+                var g = document.getElementsByName('gogo')[0]
+                document.write('Texto replicado pelo acesso a DOM usando getElementsByName &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt; ' + g.innerText +  '<br />')
+                var l = document.getElementsByClassName('loca')[0]
+                document.write('Texto replicado pelo acesso a DOM usando getElementsByClassName &gt; ' + l.innerText +  '<br />')
+                var docs = document.querySelector('li#doc')
+                document.write('Texto replicado pelo acesso a DOM usando querySelector &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt; ' + docs.innerText +  '<br />')
+            window.document.write('<hr>', ' olá mundo ', '<br />')
+            window.document.write(window.document.URL, '<br />')
+            window.document.write(window.navigator.appName)
+            </script>
+        </main>
+        <div class="foot">
+            <hr />
+            <footer>
+                <p>
+                    Estudos em HTML5, CSS3 E JAVASCRIPT por
+                    <a href="https://marceloicampos.com/about" target="_blank"
+                        >Marcelo Ildefonso Campos</a
+                    >
+                </p>
+            </footer>
+        </div>
+    </body>
+</html>
