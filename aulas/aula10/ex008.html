@@ -9,14 +9,141 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="../../css/style.css" />
         <title>JavaScript - Aula 10 - Ex 008</title>
+        <style>
+            input.put {
+                font: normal 10pt Arial;
+                width: 50px;
+            }
+
+            div#soma {
+                font: normal 15pt Arial;
+                font-weight: bold;
+            }
+
+            div#area {
+                font: normal 15pt Arial;
+                background-color: yellow;
+                color: black;
+                width: 200px;
+                height: 200px;
+                line-height: 200px;
+                text-align: center;
+                font-weight: bold;
+            }
+
+            div#area2 {
+                font: normal 15pt Arial;
+                background-color: blueviolet;
+                color: black;
+                width: 200px;
+                height: 200px;
+                line-height: 200px;
+                text-align: center;
+                font-weight: bold;
+            }
+
+            h3 {
+                margin-left: 0px;
+            }
+        </style>
     </head>
     <body>
         <main>
             <h1>Eventos do DOM - Aula 10 - Ex 008</h1>
             <p><a href="../../index.html">Voltar para HOME</a></p>
             <h2>Exercícios e Estudos com o DOM</h2>
-            <p>Parágrafo</p>
-            <script></script>
+            <div id="soma">
+                <h3>Somando Valores</h3>
+                <input type="number" name="tn1" id="tn1" class="put" />
+                +
+                <input type="number" name="tn2" id="tn2" class="put" />
+                <input type="button" value="Somar" onclick="somar()" />
+                =
+                <span id="res"></span>
+            </div>
+            <br />
+            <div
+                id="area"
+                onclick="clicar()"
+                onmouseenter="entrar()"
+                onmouseout="sair()"
+            >
+                CLIQUE AQUI
+            </div>
+            <div id="area2">CLICK HERE</div>
+            <p>
+                EVENTOS são qualquer interações que podem acontecer com qualquer
+                elemento do HTML, o mais comum são eventos de mouse como
+                mouseenter, mousemove, mousedown, mouseup, mouseout, click
+            </p>
+            <p>
+                PROCURE POR: javascript event list para a lista de eventos do
+                javascript
+            </p>
+            <p>
+                FUNCTION é uma funcionalidade ou um conjunto de códigos que vão
+                ser executadas quando um evento ocorrer, assim podemos usar as
+                function para disparar eventos ou receber eventos que executam a
+                funcionalidade.
+            </p>
+            <p>UM BLOCO DE FUNCIONALIDADE É DELIMITADO POR SINAIS DE CHAVES</p>
+            <pre>
+            <code>
+            function nameFunctionAreTheActionToDo(param, param) {
+                BLOCO DE FUNCIONALIDADES
+            }
+            </code>
+            </pre>
+            <p>
+                LISTENER ou addEventListener são de formas disparar eventos
+                através de "ouvidores" de interações, ou seja, os add Event
+                Listener ficam ouvindo ou PRESTANDO ATENÇÃO no JavaScript para
+                no momento em que acontecer o evento o mesmo dispare uma ação,
+                funciona com qualquer elemento do DOM e não só para elementos do
+                HTML
+            </p>
+            <script>
+                function somar() {
+                    var n1 = parseFloat(document.getElementById('tn1').value)
+                    var n2 = parseFloat(
+                        document.querySelector('input#tn2').value
+                    )
+                    var s = n1 + n2
+                    console.log(s)
+                    // document.getElementById('res').innerText = ('A Soma é igual a: ' + s)
+                    res.innerText = `A soma é igual a: ${s}`
+                }
+                var a = document.getElementById('area')
+                function clicar() {
+                    a.innerText = 'CLICOU'
+                    a.style.background = 'red'
+                }
+                function entrar() {
+                    a.innerText = 'ENTROU'
+                    a.style.background = 'green'
+                }
+                function sair() {
+                    a.innerText = 'SAIU'
+                    a.style.background = 'blue'
+                }
+
+                var b = document.getElementById('area2')
+                b.addEventListener('click', clicked)
+                b.addEventListener('mouseenter', enter)
+                b.addEventListener('mouseout', out)
+                function clicked() {
+                    b.innerText = 'CLICKED'
+                    b.style.background = 'red'
+                }
+                function enter() {
+                    b.innerText = 'ENTER'
+                    b.style.background = 'green'
+                }
+                function out() {
+                    b.innerText = 'OUT'
+                    b.style.background = 'blue'
+                }
+            </script>
         </main>
         <div class="foot">
             <hr />
