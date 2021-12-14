@@ -15,30 +15,41 @@
             <h1>Tratamento de Dados - Aula 06 - Ex003</h1>
             <p><a href="../../index.html">Voltar para HOME</a></p>
             <hr />
-            <h2>Principais tipos primitivos</h2>
-            <p>Nota: existem outros que estão relacionados na aula 06</p>
+            <h2>Tratamento de dados em tipos primitivos</h2>
+            <p>
+                Nota: existem outros tipos primitivos que não estão relacionados
+                na aula 06
+            </p>
+            <p>NUMBER são números como: 6 ou 5 ou 12 ou -15 ou 14.5</p>
+            <p>
+                STRING é uma cadeia de caracteres 'marcelo' ou "curso" ou
+                `video` e ficam entra aspas simples, aspas duplas ou crase
+            </p>
+            <p>
+                BOOLEAN é basicamente comportamento de valores lógicos entre
+                true or false.
+            </p>
+            <h2>Tratando os dados ou nesse caso convertendo dados</h2>
             <p>
                 NUMBER to STRING - para converter um number para uma string
-                usamos
-                <strong> String(n) ou n.toString() </strong>
+                usamos <strong> String(n) ou n.toString() </strong> .
             </p>
             <p>
                 STRING to NUMBER - para converter uma string em número inteiro
-                usamos o
-                <strong>parserInt(n)</strong> para converter num número inteiro
-                e <strong>parseFloat(n)</strong> para converter num número real,
-                ou simplesmente usamos Number(n).<br /><br />
+                usamos o <strong>parserInt(n)</strong> para converter num número
+                inteiro e <strong>parseFloat(n)</strong> para converter num
+                número real, ou simplesmente usamos Number(n).<br /><br />
                 Nota: para fixar as casas decimais no parseFloat(n) usamos o
                 .toFixed(dígitos) e nos dígitos inserimos quando dígitos de
-                casas decimais teremos no número
+                casas decimais teremos no número.
             </p>
             <p>
                 Nota: <strong>TEMPLATE STRING OU MODELO DE STRING</strong>,
                 podemos concatenar várias strings usando a template string que
                 ficam entre crase e cada variável é retornada por um modelo
-                ${variável dentro de colchetes} ou também o chamado PLACEHOLDER
-                ${}.<br /><br />
-                Template String `string ${var} string ${var}`
+                (`string ${variável dentro de colchetes}`) ou também o chamado
+                PLACEHOLDER ${var}. <br /><br />
+                Template String (`string ${var} string ${var}`)
             </p>
             <pre>
                 <code>
@@ -48,22 +59,18 @@
                     irá retornar: meu nome é marcelo tenho 42 anos
                 </code>
             </pre>
-            <p>
-                BOOLEAN - que basicamente comporta valores lógicos como true or
-                false.
-            </p>
             <div id="nome">
                 <script>
                     var n1 = Number(
                         window
                             .prompt('Digite um número qualquer')
                             .replace(',', '.')
-                    ) // n1 recebe valor string
+                    ) // n1 recebe valor number
                     var n2 = parseFloat(
                         window.prompt('Digite outro número').replace(',', '.')
-                    ) // n2 recebe valor string
+                    ) // n2 recebe valor number
                     var s = n1 + n2
-                    // var s = Number(n1) + parseFloat(n2) pode ser assim também se retirar o parse nas variáveis anteriores
+                    // var s = Number(n1) + parseFloat(n2) pode ser assim também se retirar o parse e number nas variáveis anteriores
                     // para converter uma string em número inteiro usamos o Number.parseInt(n) ou simplesmente parseInt
                     // para converter uma string em número real usamos o Number.parseFloat(n) ou simplesmente parseFloat
                     // PODEMOS TAMBÉM usar somente Number(n) e o JavaScript irá entender que é um número se quiser especificar use o parseInt ou o parseFloat
@@ -73,7 +80,7 @@
                             ' + ' +
                             String(n2).replace('.', ',') +
                             ' é igual a: ' +
-                            String(s).replace('.', ',')
+                            s.toString().replace('.', ',')
                     )
                     var nome = window.prompt('Qual é o seu nome?')
                     // a variável nome recebe o que for escrito na função window.prompt

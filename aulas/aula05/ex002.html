@@ -18,55 +18,49 @@
             <p><a href="../../index.html">Voltar para HOME</a></p>
             <hr />
             <h2>
-                Variáveis são objetos em programação que servem basicamente para
-                guardar dados
+                Variáveis são objetos em programação que servem basicamente para guardar dados
             </h2>
             <p>
-                Nota: uma variável declarada usando a declaração var ou let sem
-                especificar o valor inicial tem o valor undefined.
+                Nota: uma variável declarada usando a declaração var ou let sem especificar o valor inicial tem o valor undefined.
+                <p>
+                    <pre>
+                        <code>
+                            var name
+                            console.log(name)
+                            RETORNO - undefined
+                        </code>
+                    </pre>
+                </p>
             </p>
             <p>
-                Nota: se uma variável é nula, o valor nulo se comporta como 0 em
-                contextos numéricos e como falso em contextos booleanos.
+                Nota: se uma variável é nula, o valor nulo se comporta como 0 em contextos numéricos e como falso em contextos booleanos.
+                <p>
+                    <pre>
+                        <code>
+                            var name = null
+                            console.log(name)
+                            RETORNO - 0 ou false
+                        </code>
+                    </pre>
+                </p>
             </p>
             <p>
-                <strong>var</strong> - serve para armazenar qualquer tipo de
-                dado, &lpar;os chamados <strong>tipos primitivos</strong>&rpar;
-                em variáveis, que são desde os primários como 'Strings' ou
-                cadeia de caracteres, 'Number', 'Infinity', 'NaN', 'Boolean True
-                and False' e outros como 'null' que é um objeto para o
-                JavaScript, 'undefined', 'object', 'array' ou vetor da
-                programação e até tipos complexos como estruturas criadas pelo
-                programador como uma 'function'.<br /><br />
-                Nota: o var pode ser usado para declarar tanto variáveis locais,
-                dentro da função, como variáveis globais, fora da função.<br /><br />
-                Nota: usamos o command typeof para verificar a variável
-                utilizada. Exemplos: typeof 6 retorna um number, mas typeof '6'
-                retorna uma string 6. typeof [] é um array, para o JS retorna um
-                objeto e typeof {} retorna um objeto. Notas: null é objeto,
-                undefined é undefined, function(){} é function, NaN e infinity
-                são number e true ou false são boolean.
+                <strong>VAR</strong> - serve para armazenar qualquer tipo de dado, &lpar;os chamados <strong>tipos primitivos</strong>&rpar; em variáveis, que são desde os primários como 'Strings' ou cadeia de caracteres, 'Number', 'Infinity', 'NaN', 'Boolean True and False' e outros como 'null' que é um objeto para o JavaScript, 'undefined', 'object', 'array' ou vetor da programação e até tipos complexos como estruturas criadas pelo programador como uma 'function'.<br /><br />
+                Nota: o VAR pode ser usado para declarar tanto variáveis locais, como dentro da função, como variáveis globais ou até fora da função.<br /><br />
+                Nota: usamos o command typeof para verificar a variável utilizada.<br /><br />
+                Exemplos: typeof 6 retorna um number, mas typeof '6' retorna uma string 6. typeof [] é um array, para o JS retornar um objeto usamos typeof {} o retorno é um object.<br /><br />
+                Notas: null é objeto, undefined é undefined, function(){} é function, NaN e infinity são number, true ou false são boolean e array é um objeto.
             </p>
             <p>
-                <strong>let</strong> - é muito semelhante ao var, no sentido de
-                que podemos instanciar e armazenar qualquer tipo de objeto
-                nelas, mas uma vez criadas as variáveis, quando utilizamos o let
-                os seus valores podem ser sobrescritos, até mesmo por outros
-                tipos de dados.<br /><br />
-                Nota: poder ser usada para declarar uma variável local de escopo
-                do bloco. Nota: let significa do inglês letting or to allow or
-                permit, ou seja, deixa passar ou permita.
+                <strong>LET</strong> - é muito semelhante ao var, no sentido de que podemos instanciar e armazenar qualquer tipo de objeto nela, mas uma vez criadas as variáveis LET os seus valores podem ser sobrescritos, até mesmo por outros tipos de dados.<br /><br />
+                Nota: poder ser usada para declarar uma variável local de escopo do bloco. Nota: let significa do inglês letting or to allow or permit, ou seja, deixa passar ou permita.
             </p>
             <p>
-                <strong>const</strong> - funciona de forma análoga aos demais,
-                entretanto, uma vez que o valor foi atribuído à variável, ele
-                não pode ser modificado ou ser declarada novamente, ou seja, a
-                variável é constante.
+                <strong>CONST</strong> - funciona de forma análoga aos demais, entretanto, uma vez que o valor foi atribuído à variável, ele não pode ser modificado ou ser declarada novamente, ou seja, a variável é constante.
             </p>
             <h2>Nome da Variável ou Identificador da Variável</h2>
             <p>
-                O nome da variável chamamos de identificador segue as regras
-                abaixo definidas
+                O nome da variável chamamos de identificador segue as regras abaixo definidas
             </p>
             <p>Para escrever nomes de variáveis:</p>
             <ol>
@@ -76,27 +70,20 @@
                 <li>NÃO PODE começar com números</li>
                 <li>NÃO PODE conter espaços</li>
                 <li>
-                    NAÕ PODE usar palavras reservadas como function ou alert ou
-                    var entres outras
+                    NAÕ PODE usar palavras reservadas como function ou alert ou var entres outras
                 </li>
             </ol>
             <p>
-                NOTA: maiúsculas e minúsculas fazem diferença na hora de criar
-                uma variável.
+                NOTA: maiúsculas e minúsculas fazem diferença na hora de criar uma variável.
             </p>
             <p>
-                NOTA: é boa prática criar identificador de variáveis com nomes
-                que sejam entendidas para as próximas pessoas que forem analisar
-                o código. Nomes coerentes para as variáveis coerentes.
+                NOTA: é boa prática criar identificador de variáveis com nomes que sejam entendidas para as próximas pessoas que forem analisar o código. Nomes coerentes para as variáveis coerentes.
             </p>
             <p>
-                NOTA: Boa prática é escrever o código JS em camelCaseConvention,
-                ou seja, a primeira letra da primeira palavra do identificador
-                em minúscula e as outras palavras começando com maiúsculas.
+                NOTA: Boa prática é escrever o código JS em camelCaseConvention, ou seja, a primeira letra da primeira palavra do identificador em minúscula e as outras palavras começando com maiúsculas.
             </p>
             <p>
-                NOTA: para comentar códigos javascript usamos o // para comentar
-                uma linha e /* */ para comentar diversas linhas.
+                NOTA: para comentar códigos javascript usamos o // para comentar uma linha e /* */ para comentar diversas linhas.
             </p>
             <pre>
                 var n1 = 5 // n1 recebe 5, o number 5 é atribuída a variável n1

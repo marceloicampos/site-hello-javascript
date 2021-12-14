@@ -24,23 +24,30 @@
                 <li>== &nbsp;- IGUAL</li>
                 <li>!= &nbsp;&nbsp;- DIFERENTE</li>
                 <li>
-                    === &nbsp;- OPERADOR DE IDENTIDADE RESTRITA, pois verifica
-                    se tem mesmo valor e mesmo tipo. 5 == '5' true | 5 === '5'
+                    === &nbsp;- OPERADOR DE IGUALDADE RESTRITA, pois verifica se
+                    tem mesmo valor e mesmo tipo. 5 == '5' true | 5 === '5'
                     false .
                 </li>
                 <li>!=== &nbsp;- podemos chamar de operador NÃO IDÊNTICO</li>
             </p>
             <p>
                 NOTA: primeiro realizamos os operadores aritméticos e depois os
-                relacionais
+                relacionais,
+            </p>
+            <p>
+                NOTA: para toda operação com operadores relacionais temos como
+                resultado TRUE ou FALSE.
             </p>
             <h2>Operadores Lógicos</h2>
             <p>
-                <li>! &nbsp;&nbsp;&nbsp;&nbsp; - NEGAÇÃO</li>
+                <li>! &nbsp;&nbsp;&nbsp;&nbsp; - NEGAÇÃO - OPERADOR UNÁRIO</li>
                 <img src="./images/oper-n.jpg" alt="tabela verdade negação" />
-                <li>&& &nbsp;- E &lpar;CONJUNÇÃO&rpar;</li>
+                <li>&& &nbsp;- E &lpar;CONJUNÇÃO&rpar; - OPERADOR BINÁRIO</li>
                 <img src="./images/oper-e.png" alt="tabela verdade conjunção" />
-                <li>|| &nbsp;&nbsp;&nbsp; - OU &lpar;DISJUNÇÃO&rpar;</li>
+                <li>
+                    || &nbsp;&nbsp;&nbsp; - OU &lpar;DISJUNÇÃO&rpar; - OPERADOR
+                    BINÁRIO
+                </li>
                 <img
                     src="./images/oper-ou.png"
                     alt="tabela verdade disjunção"
@@ -53,20 +60,25 @@
             <p>NOTA: primeiro NÃO, depois E e depois OU</p>
             <h2>Operadores Ternários</h2>
             <p>
-                <li>nota média &gt;= 7 - bloco de teste</li>
+                <li>var notaMedia = 5</li>
+                <br />
+                <li>notaMedia &gt;= 7 - bloco de teste</li>
                 <br />
                 <li>? - if - bloco verdadeiro</li>
                 <br />
                 <li><strong>:</strong> &nbsp;- if else - bloco falso</li>
                 <br />
                 <li>
-                    nota média &gt;= 7 <strong>?</strong> "aprovado"
+                    notaMedia &gt;= 7 <strong>?</strong> "aprovado"
                     <strong>:</strong> "reprovado"
                 </li>
+                <p>LEMOS ASSIM: se notaMedia for maior ou igual a 7 retorne aprovado se não retorne reprovado</p>
+                <li>console.log(notaMedia)</li>
+                <li>retorna - reprovado</li>
             </p>
             <p>
-                NOTA: Chamamos de ternários porque operamos três vezes na lógica para
-                chegarmos a um resultado
+                NOTA: Chamamos de ternários porque operamos três vezes na lógica
+                para chegarmos a um resultado
             </p>
             <script></script>
         </main>

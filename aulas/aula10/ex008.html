@@ -20,7 +20,7 @@
                 font-weight: bold;
             }
 
-            div#area {
+            div#area1 {
                 font: normal 15pt Arial;
                 background-color: yellow;
                 color: black;
@@ -64,7 +64,7 @@
             </div>
             <br />
             <div
-                id="area"
+                id="area1"
                 onclick="clicar()"
                 onmouseenter="entrar()"
                 onmouseout="sair()"
@@ -99,7 +99,7 @@
                 LISTENER ou addEventListener são de formas disparar eventos
                 através de "ouvidores" de interações, ou seja, os add Event
                 Listener ficam ouvindo ou PRESTANDO ATENÇÃO no JavaScript para
-                no momento em que acontecer o evento o mesmo dispare uma ação,
+                no momento em que acontecer o evento o mesmo dispara uma ação,
                 funciona com qualquer elemento do DOM e não só para elementos do
                 HTML
             </p>
@@ -114,7 +114,7 @@
                     // document.getElementById('res').innerText = ('A Soma é igual a: ' + s)
                     res.innerText = `A soma é igual a: ${s}`
                 }
-                var a = document.getElementById('area')
+                var a = document.getElementById('area1')
                 function clicar() {
                     a.innerText = 'CLICOU'
                     a.style.background = 'red'
