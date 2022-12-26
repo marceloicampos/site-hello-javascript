@@ -21,20 +21,22 @@
                 <input type="number" name="txtVel" id="txtVel" />
                 km/h
             </p>
+            <p id="vel"></p>
             <p>
                 <input type="button" value="Verificar" onclick="verificar()" />
             </p>
             <p id="res"></p>
             <pre>
-            function verificar() {
-                let velocidade = document.querySelector('#txtVel').value
-                console.log(velocidade)
-                if (velocidade > 60) {
-                    document.querySelector('#res').innerHTML='MULTADO!'
-                } else {
-                    document.querySelector('#res').innerHTML = 'Dirija com segurança'
-                    }
-                }
+function verificar() {
+    let velocidade = Number(document.querySelector('#txtVel').value)
+    console.log(velocidade)
+    document.querySelector('#vel').innerHTML = `Sua velocidade é de ${velocidade} km/h`
+    if (velocidade > 60) {
+        document.querySelector('#res').innerHTML='Você ultrapassou a velocidade permitida. MULTADO!'
+    } else {
+        document.querySelector('#res').innerHTML = 'Dirija sempre usando cinto de segurança'
+    }
+}
             </pre>
         </main>
         <div class="foot">
@@ -46,6 +48,6 @@
                 </p>
             </footer>
         </div>
-        <script src="script.js"></script>
+        <script src="./script.js"></script>
     </body>
 </html>
