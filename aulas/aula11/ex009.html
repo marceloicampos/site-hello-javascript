@@ -15,20 +15,37 @@
             <h1>Condições - Parte 01 - Aula 11 - Ex 009</h1>
             <p><a href="../../index.html">Voltar para HOME</a></p>
             <hr />
-            <h2>Exercícios e Estudos com o DOM</h2>
-            <p>Parágrafo</p>
-            <script></script>
+            <h2>Sistema de Multas</h2>
+            <p>
+                Velocidade do Carro
+                <input type="number" name="txtVel" id="txtVel" />
+                km/h
+            </p>
+            <p>
+                <input type="button" value="Verificar" onclick="verificar()" />
+            </p>
+            <p id="res"></p>
+            <pre>
+            function verificar() {
+                let velocidade = document.querySelector('#txtVel').value
+                console.log(velocidade)
+                if (velocidade > 60) {
+                    document.querySelector('#res').innerHTML='MULTADO!'
+                } else {
+                    document.querySelector('#res').innerHTML = 'Dirija com segurança'
+                    }
+                }
+            </pre>
         </main>
         <div class="foot">
             <hr />
             <footer>
                 <p>
                     Estudos em HTML5, CSS3 E JAVASCRIPT por
-                    <a href="https://marceloicampos.com/about" target="_blank"
-                        >Marcelo Ildefonso Campos</a
-                    >
+                    <a href="https://marceloicampos.com/about" target="_blank">Marcelo Ildefonso Campos</a>
                 </p>
             </footer>
         </div>
+        <script src="script.js"></script>
     </body>
 </html>
