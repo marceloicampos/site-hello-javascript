@@ -27,8 +27,7 @@ Html base para aulas de JavaScript verifique dentro do código README
             <p><a href="../../index.html">Voltar para HOME</a></p>
             <h2>Título Exercício</h2>
             <p>Parágrafo</p>
-            <script>
-            </script>
+            <hr />
         </main>
         <div class="foot">
             <hr />
@@ -41,6 +40,7 @@ Html base para aulas de JavaScript verifique dentro do código README
                 </p>
             </footer>
         </div>
+        <script src="./script.js"></script>
     </body>
 </html>
 -->
