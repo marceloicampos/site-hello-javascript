@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta name="description" content="Web tutorials" />
+        <meta name="keywords" content="HTML, CSS, JavaScript" />
+        <meta name="author" content="Marcelo Ildefonso Campos" />
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./style.css" />
+        <title>JavaScript - Aula Prática 002</title>
+    </head>
+    <body>
+        <h1 id="title">Aula Prática 002</h1>
+        <p><a href="../../index.html">Voltar para HOME</a></p>
+        <hr />
+        <header>
+            <h1>Verificador de Idade</h1>
+        </header>
+        <section>
+            <div>
+                <p>
+                    Ano de Nascimento:
+                    <input type="number" name="txtano" id="txtano" min="0" />
+                </p>
+                <p>
+                    Sexo:
+                    <input type="radio" name="radsex" id="mas" checked />
+                    <label for="mas">Masculino</label>
+                    <input type="radio" name="radsex" id="fem" />
+                    <label for="mas">Feminino</label>
+                </p>
+                <p>
+                    <input type="button" value="Verificar" onclick="check()" />
+                </p>
+            </div>
+            <div id="res">Preencha os dados acima para ver o resultado !</div>
+        </section>
+        <footer class="foot">
+            <hr />
+            <p>
+                Estudos em HTML5, CSS3 E JAVASCRIPT por
+                <a href="https://marceloicampos.com/about" target="_blank">Marcelo Ildefonso Campos</a>
+            </p>
+        </footer>
+        <script src="./script.js"></script>
+    </body>
+</html>
