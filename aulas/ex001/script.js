@@ -1,5 +1,7 @@
-let nome = 'marcelo'
-console.log(nome)
+let meuNome = 'marcelo'
+console.log(meuNome)
+
+import { saudacao } from './test.js'
 
 function load() {
     var msg = document.getElementById('msg')
@@ -21,3 +23,26 @@ function load() {
         document.body.style.background = '#515154'
     }
 }
+
+function mostrarMensagem() {
+    const mensagem = 'Você clicou no botão'
+    alert(mensagem)
+}
+
+function senhaDigitada() {
+    let senha
+    do {
+        senha = prompt('Digite sua senha:')
+    } while (senha !== '1234')
+
+    alert('Acesso permitido!')
+}
+
+function olaMarcelo() {
+    alert(saudacao('Oi eu sou o Marcelo'))
+}
+
+window.load = load
+window.mostrarMensagem = mostrarMensagem
+window.senhaDigitada = senhaDigitada
+window.olaMarcelo = olaMarcelo
