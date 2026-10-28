@@ -3,6 +3,28 @@ console.log(meuNome)
 
 import { saudacao } from './test.js'
 
+function olaMarcelo() {
+    alert(saudacao('Oi eu sou o Marcelo'))
+}
+
+window.load = load
+window.mostrarMensagem = mostrarMensagem
+window.senhaDigitada = senhaDigitada
+window.olaMarcelo = olaMarcelo
+
+const botao = document.getElementById('adicionar')
+const entrada = document.getElementById('entrada')
+const lista = document.getElementById('lista')
+
+botao.addEventListener('click', function () {
+    if (entrada.value.trim() !== '') {
+        const item = document.createElement('li')
+        item.textContent = entrada.value
+        lista.appendChild(item)
+        entrada.value = '' // limpa o campo após adicionar
+    }
+})
+
 function load() {
     var msg = document.getElementById('msg')
     var image = document.getElementById('image')
@@ -37,12 +59,3 @@ function senhaDigitada() {
 
     alert('Acesso permitido!')
 }
-
-function olaMarcelo() {
-    alert(saudacao('Oi eu sou o Marcelo'))
-}
-
-window.load = load
-window.mostrarMensagem = mostrarMensagem
-window.senhaDigitada = senhaDigitada
-window.olaMarcelo = olaMarcelo
